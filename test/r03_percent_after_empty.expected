@@ -1,0 +1,6 @@
+
+Test for broken handling of '^% ' line following the empty line.
+Like this:
+
+1
+

@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+const char *l3 = <%literal>line 3</%literal> ":"; int nl3 = __LINE__;
+std::cout << l3 << nl3 << std::endl;
+{<%output>line 5 (<% __LINE__ %>)</%output>}
+int l6 = __LINE__;
+std::cout << std::endl << "line 6: " << l6 << std::endl;
+};

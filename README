@@ -1,0 +1,16 @@
+Constructs:
+
+code embedded in output:
+<%code> ++i; </%code>
+% ++i;
+
+output embedded in code:
+int i=0;
+<%output>whoa, it's <% i++ %>!</%output>
+
+embed literal in the code:
+#define URL "http://www.klever.net/"
+<%literal>
+ a text that is going to be there is a string
+ with some possibilities <% URL %>
+</%literal>

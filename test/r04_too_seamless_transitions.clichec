@@ -1,0 +1,9 @@
+#include <iostream>
+int main() {
+int a=1,b=2;
+<%output>
+The transition like this - <% a %><% b %> should not glue 'ab' in the source together.
+Really.
+</%output>
+}
+

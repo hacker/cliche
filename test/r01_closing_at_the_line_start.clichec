@@ -1,0 +1,16 @@
+#include <iostream>
+int main() {
+const char *t0 =
+<%literal>
+
+ test-literal
+
+</%literal>;
+std::cout << t0;
+
+<%output>
+
+ test-output
+
+</%output>
+}

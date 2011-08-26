@@ -1,0 +1,99 @@
+.TH cliche 1 "August 27th, 2011" "cliche" "Klever Group (http://www.klever.net/)"
+.hla en
+
+.SH NAME
+
+cliche \- A tinimalistc template preprocessor for c++
+
+.SH SYNOPSYS
+
+\fBcliche\fR
+[\fB-h\fR] [\fB--help\fR] [\fB--usage\fR]
+[\fB-V\fR] [\fB--version\fR]
+[\fB-L\fR] [\fB--license\fR]
+[\fB-o\fR \fIfile\fR] [\fB--output=\fR\fIfile\fR]
+[\fB-t\fR \fIcode\fR|\fIoutput\fR] [\fB--top=\fR\fIcode\fR|\fIoutput\fR]
+[\fB-C\fR] [\fB-O\fR]
+
+.SH DESCRIPTION
+
+cliche preprocesses its input to produce c++ code streaming
+out the template while executing embedded c++ code and
+expressions.
+
+An example of cliche input file may look like this:
+
+.ti 1
+#include <iostream>
+.ti 1
+int main() {
+.ti 2
+ for(int i=0;i<5;++i) {
+.ti 3
+  <%output>
+.ti 4
+   <i>Whoa, it's <b><% i %></b> already!</i><br/>
+.ti 3
+  </%output>
+.ti 2
+ }
+.ti 1
+}
+
+.SH OPTIONS
+
+.TP
+\fB-o\fR \fIfile\fR, \fB--output=\fR\fIfile\fR
+Write output to the specified file.
+.TP
+\fB-t\fR \fIcode\fR|\fIoutput\fR, \fB--top=\fR\fIcode\fR|\fIoutput\fR
+Expect input to have code or output (as if in <%code></%code> or <%output></%output> block) on the top-level. Code templates are suitable for feeding into compiler as is, whereas output templates may be better suited for #include.
+.TP
+\fB-C\fR
+Same as \fB-t code\fR.
+.TP
+\fB-O\fR
+Same as \fB-t output\fR.
+.TP
+\fB-h\fR, \fB--help\fR, \fB--usage\fR
+Display short usage instructions and exit.
+.TP
+\fB-V\fR, \fB--version\fR
+Report version and exit.
+.TP
+\fB-L\fR, \fB--license\fR
+Show licensing terms.
+
+.SH EXIT STATUS
+Unsurprisingly, \fBcliche\fR returns zero in case of success and non-zero otherwise.
+
+.SH AUTHOR
+
+Written by Michael Krelin <hacker@klever.net>
+
+
+.SH COPYRIGHT
+
+Copyright (c) 2011 Klever Group (http://www.klever.net/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+.SH BUGS
+
+You tell me. Send reports to <cliche-bugs@klever.net>

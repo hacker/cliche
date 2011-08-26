@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {<%output>
+Test for broken handling of '^% ' line following the empty line.
+Like this:
+
+% std::cout << 1 << std::endl;
+
+</%output>}
