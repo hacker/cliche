@@ -1,0 +1,13 @@
+Source: cliche
+Section: devel
+Priority: optional
+Maintainer: Michael Krelin <hacker@klever.net>
+Build-Depends: debhelper, cdbs, ragel, xsltproc
+Standards-Version: 3.9.1
+Homepage: http://kin.klever.net/cliche
+
+Package: cliche
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: tinimalistic template preprocessor
+ Tinimalistic template preprocessor for c++
